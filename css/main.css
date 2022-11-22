@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.bg-mukiz {
+  background-image: url(../img/Ecran_accueil.png);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.bg-mukiz .planette-violette {
+  position: absolute;
+  width: 415px;
+  height: 424px;
+  left: -97px;
+  top: 52px;
+}
+.bg-mukiz .planette-orange {
+  position: absolute;
+  width: 872px;
+  height: 896px;
+  left: 1460px;
+  top: 572px;
+}
+.bg-mukiz .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg-mukiz .container .logo-mukiz {
+  position: absolute;
+  width: 500.16px;
+  height: 162.87px;
+  left: 710px;
+  top: 117px;
+  filter: drop-shadow(3px 15px 25px rgba(27, 0, 71, 0.749));
+}
+.bg-mukiz .container .logo-mukiz .block-partie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  width: 368px;
+  height: 157px;
+  left: 776px;
+  top: 372px;
+}
+.bg-mukiz .container .logo-mukiz .block-partie h3 {
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
