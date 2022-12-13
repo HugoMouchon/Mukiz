@@ -13,6 +13,10 @@ body {
     // On rédéfinit une taille par défaut à 16px
     font-size: 1.6rem;
 
+    // Police "Nunito" appliquée sur toutes les pages par defaut
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+
     // Appliquer la mixin "no-margin"
     @include m.no-margin;
 }

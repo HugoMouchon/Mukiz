@@ -1,7 +1,11 @@
 // Couleur du texte par defaut
-$texte-default-color: #fff;
+$text-default-color: #fff;
+
 // Couleur du background par defaut
 $bg-default-color: #fff;
+
+// Couleur du background classement
+$bg-classement-color: rgba(255, 255, 255, 0.15);
 
 // Couleur du logo "Mukiz"
 $logo-color: linear-gradient(359.83deg, #FFD24B 0.14%, #FFE18D 99.84%);
@@ -11,6 +15,22 @@ $number-color: #1C7AEA;
 
 // Couleur de l'arrière plan
 $bg-color: #5498FC;
+
+// Couleur de l'arrière plan de l'avatar du joueur
+$bg-color-avatar: #95D9FF;
+
+// Couleur de la bordure de l'avatar du joueur
+$contour-color-avatar: #74ACFF;
+
+// Couleur du nom du joueur
+$nom-color-joueur: #1B0047;
+
+// Couleur du background du score joueur
+$bg-color-score: #FFBD00;
+
+
+
+
 
 
 

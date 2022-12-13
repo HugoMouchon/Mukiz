@@ -1,70 +1,173 @@
+// imports des différents fichiers partiel SASS
 @use "mixins" as m;
 @use "colors" as c;
 @use "breakpoint" as b;
 @use "reset" as r;
 
-.container {
-    max-width: b.$xxl-breakpoint;
-    margin: 0 auto;
-}
 
+// Page d'accueil quizz Mukiz-------------------------------------------------------------------------------------
+
+// Fond d'ecran
 .bg-mukiz {
-    background-image: url(../img/Ecran_accueil.png);
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-
-    .planette-violette {
-        position: absolute;
-        width: 415px;
-        height: 424px;
-        left: -97px;
-        top: 52px;
-    }
-
-    .planette-orange {
-        position: absolute;
-        width: 872px;
-        height: 896px;
-        left: 1460px;
-        top: 572px;
-        
-        
-    }
+    background-color: c.$bg-color;
+    background-image: url(../img/etoiles.svg);
 
     .container {
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        min-height: 50vh;
+        width: 60%;
 
-        .logo-mukiz {
-            position: absolute;
-            width: 500.16px;
-            height: 162.87px;
-            left: 710px;
-            top: 117px;
-            @include m.shadow-color-svg;
+        // Logo Mukiz avec une ombre portée
+        .logo {
+            width: 40rem;
+            @include m.shadow-color;
+        }
 
+        // Numéro de code de la partie
+        .code-partie {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: c.$text-default-color;
+            font-size: 3.2rem;
 
-            .block-partie {
+            .box-code {
+                background-color: c.$bg-default-color;
+                padding: 1.6rem 6.4rem;
+                border-radius: 1.6rem;
+                font-size: 4.8rem;
+                color: c.$number-color;
+                letter-spacing: 1.6rem;
+            }
+        }
+    }
+    .section-logo {
+        justify-content: space-around;
+        padding-top: 6rem;
+    }
+}
+
+// Planète violette en haut à gauche
+.planete-violette {
+    position: absolute;
+    width: 415px;
+    height: 424px;
+    left: -97px;
+    top: 52px;
+
+    // Animation de rotation => (0 à 360°)
+    animation: rotation 100s infinite linear;
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+// Planète orange en bas à droite
+.planete-orange {
+    position: absolute;
+    width: 872px;
+    height: 896px;
+    left: 1460px;
+    top: 572px;
+
+    animation: rotation 150s infinite linear;
+
+    // Animation de rotation => (0 à 360°)
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+// Page ingame "Classement / Historique ------------------------------------------------------------------
+
+// Section global à toute la page
+.section-ingame {
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+
+    // Titre "Classement"
+    h3 {
+        text-align: center;
+        color: c.$text-default-color;
+        text-transform: uppercase;
+        font-size: 3.2rem;
+    }
+
+    // Contenant de la partie classement
+    .container-classement {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        background-color: c.$bg-classement-color;
+        margin: 3rem 0;
+        gap: 2.4rem;
+        padding: 3.2rem 3.2rem 6.4rem 6.4rem;
+        border-radius: 0 1.6rem 1.6rem 0;
+
+        // Contenu et affichage des différents joueurs avec leur score
+        .joueur-classement {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .joueur {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                padding: 0px;
-                gap: 16px;
+                flex-grow: 2;
+                gap: 2rem;
 
-                position: absolute;
-                width: 368px;
-                height: 157px;
-                left: 776px;
-                top: 372px;
-
-                h3 {
-                    color: c.$texte-default-color;
+                // Nom du joueur
+                & span {
+                    color: c.$nom-color-joueur;
+                    font-size: 2.4rem;
                 }
             }
 
+            // Score
+            .score {
+                width: 8.8rem;
+                padding: 0.4rem 0;
+                background-color: c.$bg-color-score;
+                color: c.$nom-color-joueur;
+                border-radius: 1.6rem;
+                text-align: center;
+                font-size: 2.4rem;
+
+            }
+            
+            // Avatar
+            .avatar {
+                background-color: c.$bg-color-avatar;
+                width: 8.4rem;
+                height: 8.4rem;
+                border-radius: 100%;
+                padding: 1.3rem;
+            }
         }
+    }
+
+    // section "Music"
+    .container-music {
+        flex-grow: 4;
     }
 }

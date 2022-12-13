@@ -4,10 +4,7 @@
     padding: 0;
 }
 
-@mixin texte-style {
-}
-
 // Couleur de l'ombre portée sur le logo
-@mixin shadow-color-svg {
-    filter: drop-shadow(3px 15px 25px rgba(27, 0, 71, 0.749));
+@mixin shadow-color{
+    filter: drop-shadow(0px 32px 25px rgba(27, 0, 71, 0.7));
 }
