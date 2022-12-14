@@ -28,8 +28,8 @@
             @include m.shadow-color;
         }
 
-        // Numéro de code de la partie
-        .code-partie {
+        // Contenant du code de la partie
+        .box-partie {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -37,7 +37,8 @@
             color: c.$text-default-color;
             font-size: 3.2rem;
 
-            .box-code {
+            // Style du code de la partie 
+            .code {
                 background-color: c.$bg-default-color;
                 padding: 1.6rem 6.4rem;
                 border-radius: 1.6rem;
@@ -47,6 +48,7 @@
             }
         }
 
+        // Contenant de l'encart Joueur sur la page d'accueil
         .box-joueur {
             display: flex;
             align-items: center;
@@ -61,6 +63,7 @@
                 color: c.$accueil-color-joueur;
             }
 
+            // Style du nom du joueur qui à rejoint la partie
             .join-party {
                 font-size: 2rem;
                 font-weight: 600;
@@ -78,6 +81,7 @@
         }
     }
 
+    // Espacement entre le logo et le code de la partie
     .section-logo {
         justify-content: space-around;
         padding-top: 6rem;
@@ -92,7 +96,7 @@
     left: -97px;
     top: 52px;
 
-    // Animation de rotation => (0 à 360°)
+    // Animation de rotation => (0 à 360° sur une durée de 100 secondes)
     animation: rotation 100s infinite linear;
 
     @keyframes rotation {
@@ -116,7 +120,7 @@
 
     animation: rotation 150s infinite linear;
 
-    // Animation de rotation => (0 à 360°)
+    // Animation de rotation => (0 à 360° sur une durée de 100 secondes)
     @keyframes rotation {
         from {
             transform: rotate(0deg);
@@ -193,7 +197,6 @@
                 border-radius: 1.6rem;
                 text-align: center;
                 font-size: 2.4rem;
-
             }
         }
     }
@@ -203,7 +206,7 @@
         display: flex;
         flex-direction: column;
 
-        // Contenant
+        // Contenant du box "Best of France"
         .box-playlist {
             display: flex;
             align-items: center;
@@ -211,6 +214,7 @@
             border-radius: 0 0 1.6rem 1.6rem;
             margin: 0 7.5rem 0 0;
 
+            // Carré bleu
             .carre-bleu {
                 width: 10rem;
                 height: 10rem;
@@ -220,6 +224,7 @@
 
             }
 
+            // Titre "Best of France"
             h1 {
                 color: c.$titre-color-bestOfFrance;
                 font-size: 4.8rem;
@@ -227,22 +232,27 @@
             }
         }
 
+        // Section historique de musique
         .historique {
 
+            // Titre "historique"
             h2 {
                 color: c.$text-default-color;
                 font-size: 2.4rem;
                 font-weight: 800;
             }
 
+            // Contenant du box "chanson"
             .box-chanson {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 2rem;
 
+                // Taille de l'encart (pochette d'album + compisteur + titre de ka chanson)
                 .chanson {
                     width: 22rem;
 
+                    // Nom du compositeur/auteur et du titre de la chanson
                     .compositeur,
                     .titre-chanson {
                         margin: 0;
@@ -251,6 +261,7 @@
                         font-weight: 800;
                     }
 
+                    // Epaisseur du titre de la chanson
                     .titre-chanson {
                         font-weight: 600;
                     }
