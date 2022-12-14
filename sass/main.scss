@@ -46,7 +46,38 @@
                 letter-spacing: 1.6rem;
             }
         }
+
+        .box-joueur {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            // Nom du joueur
+            .nom-joueur,
+            .join-party {
+                margin: 0;
+                font-size: 3.6rem;
+                font-weight: 800;
+                color: c.$accueil-color-joueur;
+            }
+
+            .join-party {
+                font-size: 2rem;
+                font-weight: 600;
+                color: c.$text-default-color;
+            }
+        }
+
+        // Avatar
+        .avatar {
+            background-color: c.$bg-color-avatar;
+            width: 8.4rem;
+            height: 8.4rem;
+            border-radius: 100%;
+            padding: 1.3rem;
+        }
     }
+
     .section-logo {
         justify-content: space-around;
         padding-top: 6rem;
@@ -101,6 +132,7 @@
 
 // Section global à toute la page
 .section-ingame {
+    min-height: 100vh;
     display: flex;
     gap: 5rem;
     width: 100%;
@@ -111,13 +143,14 @@
         color: c.$text-default-color;
         text-transform: uppercase;
         font-size: 3.2rem;
+        font-weight: 800;
     }
 
     // Contenant de la partie classement
     .container-classement {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
+        width: 80rem;
         background-color: c.$bg-classement-color;
         margin: 3rem 0;
         gap: 2.4rem;
@@ -130,31 +163,18 @@
             justify-content: space-between;
             align-items: center;
 
-            .joueur {
+            .box-joueur {
                 display: flex;
                 align-items: center;
-                flex-grow: 2;
                 gap: 2rem;
 
                 // Nom du joueur
-                & span {
-                    color: c.$nom-color-joueur;
+                p {
+                    color: c.$classement-color-joueur;
                     font-size: 2.4rem;
                 }
             }
 
-            // Score
-            .score {
-                width: 8.8rem;
-                padding: 0.4rem 0;
-                background-color: c.$bg-color-score;
-                color: c.$nom-color-joueur;
-                border-radius: 1.6rem;
-                text-align: center;
-                font-size: 2.4rem;
-
-            }
-            
             // Avatar
             .avatar {
                 background-color: c.$bg-color-avatar;
@@ -163,11 +183,84 @@
                 border-radius: 100%;
                 padding: 1.3rem;
             }
+
+            // Score
+            .score {
+                width: 8.8rem;
+                padding: 0.4rem 0;
+                background-color: c.$bg-color-score;
+                color: c.$classement-color-joueur;
+                border-radius: 1.6rem;
+                text-align: center;
+                font-size: 2.4rem;
+
+            }
         }
     }
 
     // section "Music"
     .container-music {
-        flex-grow: 4;
+        display: flex;
+        flex-direction: column;
+
+        // Contenant
+        .box-playlist {
+            display: flex;
+            align-items: center;
+            background-color: c.$bg-color-bestOfFrance;
+            border-radius: 0 0 1.6rem 1.6rem;
+            margin: 0 7.5rem 0 0;
+
+            .carre-bleu {
+                width: 10rem;
+                height: 10rem;
+                margin: 4rem;
+                border-radius: 0.8rem;
+                background-color: c.$color-carre-bestOfFrance;
+
+            }
+
+            h1 {
+                color: c.$titre-color-bestOfFrance;
+                font-size: 4.8rem;
+                font-weight: 800;
+            }
+        }
+
+        .historique {
+
+            h2 {
+                color: c.$text-default-color;
+                font-size: 2.4rem;
+                font-weight: 800;
+            }
+
+            .box-chanson {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                .chanson {
+                    width: 22rem;
+
+                    .compositeur,
+                    .titre-chanson {
+                        margin: 0;
+                        text-align: center;
+                        color: c.$text-default-color;
+                        font-weight: 800;
+                    }
+
+                    .titre-chanson {
+                        font-weight: 600;
+                    }
+
+                    img {
+                        width: 100%;
+                        border-radius: 1.6rem;
+                    }
+                }
+            }
+        }
     }
 }

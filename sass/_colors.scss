@@ -1,6 +1,9 @@
 // Couleur du texte par defaut
 $text-default-color: #fff;
 
+// Couleur du texte des noms des joueurs sur la page d'accueil
+$accueil-color-joueur: #FFE000;
+
 // Couleur du background par defaut
 $bg-default-color: #fff;
 
@@ -13,6 +16,9 @@ $logo-color: linear-gradient(359.83deg, #FFD24B 0.14%, #FFE18D 99.84%);
 // Couleur des nombres
 $number-color: #1C7AEA;
 
+// Couleur du titre de "best of France"
+$titre-color-bestOfFrance: #1C7AEA;
+
 // Couleur de l'arrière plan
 $bg-color: #5498FC;
 
@@ -22,12 +28,17 @@ $bg-color-avatar: #95D9FF;
 // Couleur de la bordure de l'avatar du joueur
 $contour-color-avatar: #74ACFF;
 
-// Couleur du nom du joueur
-$nom-color-joueur: #1B0047;
+// Couleur du nom du joueur sur la partie classement
+$classement-color-joueur: #1B0047;
 
 // Couleur du background du score joueur
 $bg-color-score: #FFBD00;
 
+// Couleur du carré bleu de "best of France"
+$color-carre-bestOfFrance: #4B04BE;
+
+// Couleur du background "best of France"
+$bg-color-bestOfFrance: rgba(255, 255, 255, 0.85);
 
 
 

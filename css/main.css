@@ -52,6 +52,30 @@ img {
   color: #1C7AEA;
   letter-spacing: 1.6rem;
 }
+.bg-mukiz .container .box-joueur {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.bg-mukiz .container .box-joueur .nom-joueur,
+.bg-mukiz .container .box-joueur .join-party {
+  margin: 0;
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #FFE000;
+}
+.bg-mukiz .container .box-joueur .join-party {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.bg-mukiz .container .avatar {
+  background-color: #95D9FF;
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 100%;
+  padding: 1.3rem;
+}
 .bg-mukiz .section-logo {
   justify-content: space-around;
   padding-top: 6rem;
@@ -92,6 +116,7 @@ img {
 }
 
 .section-ingame {
+  min-height: 100vh;
   display: flex;
   gap: 5rem;
   width: 100%;
@@ -101,11 +126,12 @@ img {
   color: #fff;
   text-transform: uppercase;
   font-size: 3.2rem;
+  font-weight: 800;
 }
 .section-ingame .container-classement {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 80rem;
   background-color: rgba(255, 255, 255, 0.15);
   margin: 3rem 0;
   gap: 2.4rem;
@@ -117,15 +143,21 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.section-ingame .container-classement .joueur-classement .joueur {
+.section-ingame .container-classement .joueur-classement .box-joueur {
   display: flex;
   align-items: center;
-  flex-grow: 2;
   gap: 2rem;
 }
-.section-ingame .container-classement .joueur-classement .joueur span {
+.section-ingame .container-classement .joueur-classement .box-joueur p {
   color: #1B0047;
   font-size: 2.4rem;
+}
+.section-ingame .container-classement .joueur-classement .avatar {
+  background-color: #95D9FF;
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 100%;
+  padding: 1.3rem;
 }
 .section-ingame .container-classement .joueur-classement .score {
   width: 8.8rem;
@@ -136,15 +168,55 @@ img {
   text-align: center;
   font-size: 2.4rem;
 }
-.section-ingame .container-classement .joueur-classement .avatar {
-  background-color: #95D9FF;
-  width: 8.4rem;
-  height: 8.4rem;
-  border-radius: 100%;
-  padding: 1.3rem;
-}
 .section-ingame .container-music {
-  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+}
+.section-ingame .container-music .box-playlist {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0 0 1.6rem 1.6rem;
+  margin: 0 7.5rem 0 0;
+}
+.section-ingame .container-music .box-playlist .carre-bleu {
+  width: 10rem;
+  height: 10rem;
+  margin: 4rem;
+  border-radius: 0.8rem;
+  background-color: #4B04BE;
+}
+.section-ingame .container-music .box-playlist h1 {
+  color: #1C7AEA;
+  font-size: 4.8rem;
+  font-weight: 800;
+}
+.section-ingame .container-music .historique h2 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.section-ingame .container-music .historique .box-chanson {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.section-ingame .container-music .historique .box-chanson .chanson {
+  width: 22rem;
+}
+.section-ingame .container-music .historique .box-chanson .chanson .compositeur,
+.section-ingame .container-music .historique .box-chanson .chanson .titre-chanson {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+}
+.section-ingame .container-music .historique .box-chanson .chanson .titre-chanson {
+  font-weight: 600;
+}
+.section-ingame .container-music .historique .box-chanson .chanson img {
+  width: 100%;
+  border-radius: 1.6rem;
 }
 
 /*# sourceMappingURL=main.css.map */
